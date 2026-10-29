@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahruza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Parol oynasi -->
+  <section id="gate">
+    <form id="gateForm" autocomplete="off">
+      <label for="pass">parol</label>
+      <input id="pass" type="password" inputmode="numeric" autocomplete="off" autofocus>
+      <p id="gateMsg" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- 2. Asosiy sahifa -->
+  <main id="site" hidden>
+
+    <section class="hero">
+      <canvas id="sky"></canvas>
+      <p class="hint" id="hint">ekranga tegib ko'r</p>
+    </section>
+
+    <section class="stars">
+      <h2>Osmonda beshta yulduz yashirin</h2>
+      <p class="sub">Har birini topib bos.</p>
+      <div class="field" id="field"></div>
+      <div class="panel" id="panel" aria-live="polite"></div>
+    </section>
+
+    <section class="fog-sec">
+      <h2>Oyna tumanlab ketgan</h2>
+      <p class="sub">Barmog'ing bilan artib ko'r. Tuman tez qaytadi, shoshil.</p>
+      <div class="fog" id="fog">
+        <p class="under" id="fogText"></p>
+        <canvas id="fogCanvas"></canvas>
+      </div>
+    </section>
+
+    <section class="wish-sec">
+      <h2>Orzu fonusi</h2>
+      <p class="sub">Yuragingizdagi tilakni yozing va osmonga uchiring.</p>
+      
+      <form id="wishForm" autocomplete="off">
+        <input id="wishInput" type="text" maxlength="80" placeholder="orzuingizni yozing..." aria-label="Orzuing">
+        <button type="submit">Uchirish ✨</button>
+      </form>
+
+      <div class="wishsky" id="wishSky"></div>
+      <p class="wishnote" id="wishNote" aria-live="polite"></p>
+    </section>
+
+    <!-- Eng pastdagi savol bo'limi -->
+    <section class="final-sec" id="finalSec">
+      <h2>Men bilan baxtlimisan?</h2>
+      <div class="answer-box">
+        <button id="btnYes" class="ans-btn" type="button">Ha 💖</button>
+        <button id="btnNo" class="ans-btn" type="button">Yo'q 🙈</button>
+      </div>
+    </section>
+
+    <footer id="end" class="end">
+      <p>Shahruza, bu sayt faqat sen uchun yaratilgan. ❤️</p>
+    </footer>
+
+  </main>
+
+  <!-- Kinematik Mushakbozlik va Yozuvlar oynasi -->
+  <div id="cinematicOverlay" class="cinematic-overlay" hidden>
+    <canvas id="fireworksCanvas"></canvas>
+    <div id="cinematicText" class="cinematic-text"></div>
+  </div>
+
+  <!-- Musiqa uchun audio element -->
+<audio id="romanticAudio" src="qoshiq.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
